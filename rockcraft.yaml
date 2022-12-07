@@ -1,0 +1,28 @@
+name: ory-hydra
+base: bare
+build-base: ubuntu:22.04
+version: '2.0.2'
+summary: Ory Hydra is a hardened, OpenID Certified OAuth 2.0 Server and OpenID Connect Provider.
+description: |
+    Ory Hydra is a hardened, OpenID Certified OAuth 2.0 Server and OpenID Connect Provider optimized for low-latency, high throughput, and low resource consumption. 
+    Ory Hydra is not an identity provider (user sign up, user login, password reset flow), but connects to your existing identity provider through a login and consent app. 
+    Implementing the login and consent app in a different language is easy, and exemplary consent apps (Node) and SDKs for common languages are provided.
+license: Apache-2.0
+platforms:
+    amd64:
+
+cmd: ["hydra", "serve"]
+
+parts:
+    ory-hydra:
+        plugin: go
+        source: https://github.com/ory/hydra.git
+        source-type: git
+        source-tag: v2.0.2
+        go-buildtags: 
+          - sqlite
+          - json1
+        stage-packages:
+          - libc6_libs
+        build-snaps:
+          - go
