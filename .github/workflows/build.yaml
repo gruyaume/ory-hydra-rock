@@ -5,11 +5,11 @@ on:
 
 jobs:
   main:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
+
       - name: Setup LXD
         uses: whywaita/setup-lxd@v1
         with:
