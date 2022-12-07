@@ -1,7 +1,7 @@
 name: ory-hydra
 base: bare
 build-base: ubuntu:22.04
-version: '2.0.2'
+version: 'v2.0.2'
 summary: Ory Hydra is a hardened, OpenID Certified OAuth 2.0 Server and OpenID Connect Provider.
 description: |
     Ory Hydra is a hardened, OpenID Certified OAuth 2.0 Server and OpenID Connect Provider optimized for low-latency, high throughput, and low resource consumption. 
@@ -11,7 +11,7 @@ license: Apache-2.0
 platforms:
     amd64:
 
-cmd: ["hydra", "serve"]
+cmd: ["hydra"]
 
 parts:
     ory-hydra:

@@ -11,7 +11,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: free5gc-pcf
+  IMAGE_NAME: ory-hydra
 
 jobs:
   build:
@@ -47,7 +47,7 @@ jobs:
 
       - uses: actions/download-artifact@v3
         with:
-          name: free5gc-pcf-rock
+          name: ory-hydra-rock
 
       - name: Import and push to github package
         run: |
